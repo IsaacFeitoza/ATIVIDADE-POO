@@ -1,5 +1,6 @@
-import { getSystemErrorMap } from "util";
+
 //PRIMEIRA QUESTÃO
+import { getSystemErrorMap } from "util";
 const prompt = require("prompt-sync")();
 let t = prompt('Digite a nota do TRABALHO: ')
 let a = prompt('Digite a nota da AVALIAÇÃO: ')
