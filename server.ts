@@ -36,7 +36,7 @@ const prompt = require("prompt-sync")();
    let numero = new Array(4)
 
    for (var i = 0; i < numero.length; i++){
-     numero[i] = prompt(`Informe o ${i+1} numero:`);
+     numero[i] = prompt(`Informe o ${i+1} numero: `);
    }
    console.log(`${numero.sort()}`)
    console.log(`${numero.reverse()}`)
@@ -104,7 +104,7 @@ let qtdPar = 0
 
 let qtdImpar = 0
 
-let num =  Number(prompt('Digite um valor:  '))
+let num =  Number(prompt('DIGITE UM NÚMERO:  '))
 
 function quinta (){
   
@@ -115,8 +115,7 @@ menor = num
 while(num != 30000){
    qtdNum += 1
    somaNum += num
-   num = Number(prompt('Digite um valor: '))
-
+   num = Number(prompt('DIGITE UM NÚMERO: '))
    if (num > maior){
     maior = num
   }else if (num < menor){
@@ -130,16 +129,16 @@ while(num != 30000){
   }
 }
 
-console.log(`Quantidade de números digitados: ${qtdNum}`);
+console.log(`QUANTIDADE DE NÚMEROS: ${qtdNum}`);
 
-console.log(`Média dos números: ${((somaNum+30000) / qtdNum).toFixed(1)}`);
+console.log(`MÉDIA DOS NÚMEROS: ${((somaNum+30000) / qtdNum).toFixed(1)}`);
 
-console.log(`O maior número foi: ${maior}`);
+console.log(`MAIOR NÚMERO: ${maior}`);
 
-console.log(`O menor número foi: ${menor}`);
+console.log(`MENOR NÚMERO: ${menor}`);
 
-console.log(`Média dos números pares: ${somaPar / qtdPar}`);
+console.log(`MÉDIA DOS PARES: ${somaPar / qtdPar}`);
 
-console.log(`Porcentagem de números ímpares: ${(qtdImpar / qtdNum * 100).toFixed(1)}%`);
+console.log(`PORCENTAGEM DOS ÍMPARES: ${(qtdImpar / qtdNum * 100).toFixed(1)}%`);
 }
 quinta()
