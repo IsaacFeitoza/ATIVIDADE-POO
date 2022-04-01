@@ -1,6 +1,4 @@
-
 //PRIMEIRA QUESTÃO
-import { getSystemErrorMap } from "util";
 const prompt = require("prompt-sync")();
 let t = prompt('Digite a nota do TRABALHO: ')
 let a = prompt('Digite a nota da AVALIAÇÃO: ')
@@ -9,18 +7,20 @@ let m = ((t*2) + (a*3) + (e*5))/10;
  console.log(`A SUA MÉDIA É:`, m);{
      
     if (m >= 8){
-    console.log("Conceito: A")
+    console.log("CONCEITO: A")
     }else if (m >= 7){
-     console.log('Conceito: B')
+     console.log('CONCEITO: B')
     }else if (m >= 6){
-      console.log('Concentio: C')
+      console.log('CONCEITO: C')
     }else if (m >= 5)
-    console.log('Conceito: D')
+    console.log('CONCEITO: D')
     else
-    console.log('Conceito: E')
+    console.log('CONCEITO: E')
    }
 
- //SEGUNDA QUESTÃO
+ 
+ 
+   //SEGUNDA QUESTÃO
 const prompt = require("prompt-sync")();
 let numero = new Array(3)
 
@@ -28,6 +28,8 @@ for (var i = 0; i < numero.length; i++){
   numero[i] = prompt(`Informe o ${i+1} numero:`);
 }
 console.log(`${numero.sort()}`);
+
+
 
 //TERCEIRA QUESTÃO
 const prompt = require("prompt-sync")();
@@ -40,7 +42,8 @@ const prompt = require("prompt-sync")();
    console.log(`${numero.reverse()}`)
 
 
-//QUARTA QUESTÃO
+
+   //QUARTA QUESTÃO
 const prompt = require("prompt-sync")();
 
 let cod = prompt(`Informe o código: `);
@@ -81,4 +84,62 @@ let sl = prompt(`Informe o salãrio: `); {
     }
 }
 
+
+
 //QUINTA QUESTÃO
+const prompt = require("prompt-sync")();
+
+
+let qtdNum = 1
+
+let somaNum = 0
+
+let maior = 0
+
+let menor = 0
+
+let somaPar = 0
+
+let qtdPar = 0
+
+let qtdImpar = 0
+
+let num =  Number(prompt('Digite um valor:  '))
+
+function quinta (){
+  
+maior = num
+
+menor = num
+
+while(num != 30000){
+   qtdNum += 1
+   somaNum += num
+   num = Number(prompt('Digite um valor: '))
+
+   if (num > maior){
+    maior = num
+  }else if (num < menor){
+    menor = num
+  }
+  if (num % 2 == 0){
+    qtdPar += 1
+    somaPar += num
+  }else{
+  qtdImpar += 1
+  }
+}
+
+console.log(`Quantidade de números digitados: ${qtdNum}`);
+
+console.log(`Média dos números: ${((somaNum+30000) / qtdNum).toFixed(1)}`);
+
+console.log(`O maior número foi: ${maior}`);
+
+console.log(`O menor número foi: ${menor}`);
+
+console.log(`Média dos números pares: ${somaPar / qtdPar}`);
+
+console.log(`Porcentagem de números ímpares: ${(qtdImpar / qtdNum * 100).toFixed(1)}%`);
+}
+quinta()
