@@ -27,7 +27,7 @@ let numero = new Array(3)
 for (var i = 0; i < numero.length; i++){
   numero[i] = prompt(`Informe o ${i+1} numero:`);
 }
-console.log(`${numero.sort()}`);
+console.log(`${numero.sort((a,b)=> (a-b))}`);
 
 
 
